@@ -1,5 +1,8 @@
 .html {
     background-color: #C8C9C7;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 header {
@@ -15,8 +18,10 @@ header {
     margin: auto;
 }
 
-.body {
+body {
     margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 .column {
@@ -29,13 +34,19 @@ header {
 .iframe{
     width: 960px;
     height: 600px;
-    padding-left: 18%;
+    margin-left: 50%;
+    margin-right: 50%;  
+    /* padding-left: 50%;
+    padding-right: 50%; */
+    transform: translate(-50%,0);
     border: 0px;
 }
 
-.chart {
-    margin: auto;
-    width: 70%;
+@media screen and (min-width: 480px) {
+    .chart {
+        margin: auto;
+        width: 70%;
+    }
 }
 
 /* Navigation Styling */
