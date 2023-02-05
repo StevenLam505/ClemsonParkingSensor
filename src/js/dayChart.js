@@ -24,7 +24,7 @@ function CreateTable(){
     datasets: [{
       label: 'Percent At Capacity',
       // we will pass into data from python]
-      data: newData,
+      data: [80],
       borderWidth: 1,
       backgroundColor: '#F56600',
       borderColor: '#F56600'
@@ -43,6 +43,8 @@ function CreateTable(){
 }
 
 function ChangeParkingLot(){
+  let result = objArray.map(hc_data => hc_data.foo);
+  console.log(result);
   lineChart.destroy();
   CreateTable();
 }
