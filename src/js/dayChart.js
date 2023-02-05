@@ -3,7 +3,6 @@ const chart = document.getElementById('dayChart');
 
 function CreateTable(){
   const newData = Array.from({length: 53}, () => Math.floor(Math.random() * 100));
-  retrieveData();
   lineChart = new Chart(chart, {
   type: 'line',
   data: {
@@ -23,8 +22,7 @@ function CreateTable(){
     '8:00 PM'],
     datasets: [{
       label: 'Percent At Capacity',
-      // we will pass into data from python]
-      data: retrieveData,
+      data: retrieveData(),
       borderWidth: 1,
       backgroundColor: '#F56600',
       borderColor: '#F56600'

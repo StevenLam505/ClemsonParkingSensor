@@ -11,8 +11,8 @@ function retrieveData()
 {
     const obj = JSON.parse(httpGet());
     const capacityPercents = [];
-    for(let i = 0; i < 53; i++){
+    for(let i = 55; i > 0; i--){
         capacityPercents.push(obj[i]['occupancypct']);
     }
-    console.log(capacityPercents);
+    return capacityPercents;
 }
