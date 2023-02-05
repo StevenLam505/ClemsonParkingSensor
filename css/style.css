@@ -22,9 +22,15 @@ header {
 .column {
     margin: auto;
     width: 90%;
-    height: 500px;
+    height: 100%;
     background-color: #FFFFFF;
     box-shadow: 10px 10px 10px 10px grey;
+}
+
+.iframe{
+    width: 960px;
+    height: 600px;
+    padding-left: 20%;
 }
 
 .chart {

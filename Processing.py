@@ -1,4 +1,3 @@
-from DailyTrendsDictionary import *
 from datetime import datetime
 import requests
 import os

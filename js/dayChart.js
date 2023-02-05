@@ -3,6 +3,7 @@ const chart = document.getElementById('dayChart');
 
 function CreateTable(){
   const newData = Array.from({length: 53}, () => Math.floor(Math.random() * 100));
+  const data = httpGet();
   lineChart = new Chart(chart, {
   type: 'line',
   data: {
