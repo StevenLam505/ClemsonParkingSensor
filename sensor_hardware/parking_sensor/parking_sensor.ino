@@ -55,7 +55,7 @@ void loop() {
   if(7 < hour && hour < 19)
     delay2 = 1;
   else
-    delay2 = 10;
+    delay2 = 1;
 
   if(distance <= 120)
     occupied = true;
