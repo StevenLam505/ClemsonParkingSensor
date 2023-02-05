@@ -8,7 +8,6 @@ int distance, hour, delay2, count;
 char received_str[3];
 char data;
 bool occupied = false;
-bool previous = false;
 
 void setup() {
   hour = 0;
@@ -61,5 +60,4 @@ void loop() {
     occupied = true;
   else
     occupied = false;
-  
 }
