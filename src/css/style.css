@@ -42,16 +42,26 @@ body {
     border: 0px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
     .chart {
         margin: auto;
         width: 70%;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .chart {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+
 /* Navigation Styling */
 .topnav {
     background-color: #F56600;
+    /* margin-left:50%;
+    transform: translate(-50%,0) */
 }
 
 /* Dropdown Button */

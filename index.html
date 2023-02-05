@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="src/css/style.css">
-<script></script>
 
 <html>
-    <title>Clemson Parking Spaces</title>
+    <head>
+        <link rel="stylesheet" href="src/css/style.css">
+        <script></script>
+        <title>Clemson Parking Spaces</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
 
 <header>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img class="headerText" src="src/images/clemsonUniversityName.png" />>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <img class="headerText" src="src/images/clemsonUniversityName.png" />
 </header>
 
 <body onload="CreateTable()">
@@ -32,7 +34,28 @@
         </div>
     </div>
     <div class="column">
-        <iframe class="iframe" src="parkingLot.html" title="description" scrolling="no"></iframe>
+        <iframe class="iframe" id="parkinglot_iframe" src="parkingLot.html" title="description" scrolling="no" style="width: 960px;height: 600px;"></iframe>
+        <script>
+            var iframe = document.getElementById("parkinglot_iframe");
+
+            function resizeIt(){
+                var iframeWidth = parseFloat(iframe.style.width.replace("px",""));
+                // iframe.style.transform = "translate(-50%,0) rotate(90deg)"
+                // console.log(parseFloat(iframe.style.width.replace("px","")));
+                if(window.innerWidth < iframeWidth){
+                    var scaleString = (window.innerWidth/iframeWidth).toString();
+                    iframe.style.transform = "translate(-50%,0) scale("+scaleString+","+scaleString+")";
+                }
+                else
+                {
+                    var scaleString = "1";
+                    iframe.style.transform = "translate(-50%,0) scale("+scaleString+","+scaleString+")";
+                }
+            }
+
+            window.addEventListener("resize",resizeIt);
+            iframe.addEventListener("load",resizeIt);
+        </script>
         <canvas id="dayChart" class="chart"></canvas>
     </div>
 
