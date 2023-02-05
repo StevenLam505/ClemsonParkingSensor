@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/style.css">
+<script></script>
+
+<html>
+    <title>Clemson Parking Spaces</title>
+
+<header>
+    <img class="headerText" src="../images/clemsonUniversityName.png" />
+</header>
+
+<body onload="CreateTable()">
+    <div class="topnav">
+        <div class="dropdown">
+            <button class="dropbtn">Commuter Parking</button>
+            <div class="dropdown-content">
+                <a id="C1" onclick="ChangeParkingLot()">C-1</a>
+                <a id="C2" onclick="ChangeParkingLot()">C-2</a>
+                <a id="C11" onclick="ChangeParkingLot()">C-11 (Brooks)</a>
+            </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Employee Parking</button>
+            <div class="dropdown-content">
+                <a id="E1" onclick="ChangeParkingLot()">E-1</a>
+                <a id="E2" onclick="ChangeParkingLot()">E-2</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <canvas id="dayChart" class="chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dayChart.js"></script>
+</body>
+</html>

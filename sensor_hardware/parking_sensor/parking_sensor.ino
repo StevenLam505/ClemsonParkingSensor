@@ -8,7 +8,6 @@ int distance, hour, delay2, count;
 char received_str[3];
 char data;
 bool occupied = false;
-bool previous = false;
 
 void setup() {
   hour = 0;
@@ -55,11 +54,10 @@ void loop() {
   if(7 < hour && hour < 19)
     delay2 = 1;
   else
-    delay2 = 10;
+    delay2 = 1;
 
   if(distance <= 120)
     occupied = true;
   else
     occupied = false;
-  
 }
