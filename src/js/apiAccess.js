@@ -4,12 +4,15 @@ function httpGet()
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", url, false ); // false for synchronous request
     xmlHttp.send( null );
-    console.log(parseJson(xmlHttp.responseText));
     return xmlHttp.responseText;
 }
 
-function parseJson(jsonData)
+function retrieveData()
 {
-    const obj = JSON.parse(jsonData);
-    return obj;
+    const obj = JSON.parse(httpGet());
+    const capacityPercents = [];
+    for(let i = 0; i < 53; i++){
+        capacityPercents.push(obj[i]['occupancypct']);
+    }
+    console.log(capacityPercents);
 }
