@@ -1,5 +1,5 @@
 html {
-    background-color: #C8C9C7;
+    /* background-color: #C8C9C7; */
     /* margin: 0px;
     padding: 0px; */
     overflow-x: hidden;
@@ -11,12 +11,7 @@ header {
 	background: url('../images/header-bg.jpg')
 }
 
-.headerText {
-    height: 70%;
-    display: block;
-    padding-top: 1.5%;
-    margin: auto;
-}
+
 
 body {
     margin: 0px;
@@ -47,12 +42,26 @@ body {
         margin: auto;
         width: 70%;
     }
+    .headerText {
+        height: 70%;
+        display: block;
+        padding-top: 1.5%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .chart {
         margin: auto;
         width: 100%;
+    }
+    .headerText {
+        width: 70%;
+        display: block;
+        /* padding-top: 1.5%; */
+        padding-top: 50%;
+        transform: translate(0,-50%);
+        margin: auto;
     }
 }
 
