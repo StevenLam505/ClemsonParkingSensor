@@ -2,7 +2,7 @@
 Project for 2023 CUHackit
 
 Found at: https://stevenlam505.github.io/ClemsonParkingSensor/
-DevPost Link: https://devpost.com/software/clemson-parking-space-tracker
+
 
 Inspiration
 The parking situation at Clemson has grown to be a serious problem ever since the COVID-19 lockdown. The number of students on campus has increased significantly without appropriate increases to the infrastructure. As a result, parking for commuting students always takes a significant amount of time, so this project hopes to combat this problem.
